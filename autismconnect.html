@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+      body {
+  		background-color: lightblue;
+ 		color: blue;
+  		font-family: "Arial", "Arial", Arial, sans-serif;
+  		text-align: center;
+  		padding:0;
+	  }
+
+.wrapper {
+  margin: px auto;
+  max-width: 600px;
+  padding: 40px;
+  border: 10px double red;
+}
+    </style>
+	<title>
+AutismConnect NYC</title>
+</head>
+<body>
+<h3>
+AutismConnect NYC</h3>
+	<div id="map"></div>
+<script>
+      function initMap() {
+      	
+      	
+      
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 40.783001, lng: -73.958882},
+            zoom: 11,
+            mapTypeId: 'satellite'
+             
+        });
+
+        //var myLatlng = {lat:40.643797,lng:-73.963661};
+
+      	var contentString = "Brooklyn Autism Center"
+      	var infowindow = new google.maps.InfoWindow({
+    		content: contentString
+  		});
+  		
+
+
+      	var image = {
+      		url: "http://maps.gpsvisualizer.com/google_maps/icons/google/blue.png",
+      		 // size: new google.maps.Size(40, 64),
+      		// origin: new google.maps.Point(0, 0),
+      		// anchor: new google.maps.Point(0, 32)
+      	};
+      	var marker = new google.maps.Marker({
+    		position:  {lat:40.692507,lng:-73.986475},
+    		map: map,
+    		icon:image,
+
+    		title: 'Brooklyn Autism Center'
+
+  		});
+  		marker.addListener('click', function() {
+    		infowindow.open(map, marker);
+ 		 });
+  		var contentString2 = "Block Institute School"
+      	var infowindow2 = new google.maps.InfoWindow({
+    		content: contentString2
+  		});
+  		var marker2 = new google.maps.Marker({
+    		position:  {lat:40.746870,lng:-73.980173},
+    		map: map,
+    		icon:image,
+    	
+    		title: 'Block Institute School'
+  		});
+  		marker2.addListener('click', function() {
+    		infowindow2.open(map, marker2);
+ 		 });
+		var contentString3 = "The Neighborhood Charter School of Harlem"
+      	var infowindow3 = new google.maps.InfoWindow({
+    		content: contentString3
+  		});
+  		var marker3 = new google.maps.Marker({
+    		position:  {lat:40.807580,lng:-73.947377},
+    		map: map,
+    		icon:image,
+    	
+    		title: 'The Neighborhood Charter School of Harlem'
+  		});
+  		marker3.addListener('click', function() {
+    		infowindow3.open(map, marker3);
+ 		 });
+  		var contentString4 = " New York Center for Autism Charter School"
+      	var infowindow4 = new google.maps.InfoWindow({
+    		content: contentString4
+  		});
+  		var marker4 = new google.maps.Marker({
+    		position:  {lat:40.785868,lng:-73.940587},
+    		map: map,
+    		icon:image,
+    	
+    		title: ' New York Center for Autism Charter School'
+    	});
+    	marker4.addListener('click', function() {
+    		infowindow4.open(map, marker4);
+ 		 });
+  		var contentString5 = "Imagine Academy for Autism"
+      	var infowindow5 = new google.maps.InfoWindow({
+    		content: contentString5
+  		});
+  		var marker5 = new google.maps.Marker({
+    		position:  {lat:40.613957,lng:-73.960497},
+    		map: map,
+    		icon:image,
+    	
+    		title: 'Imagine Academy for Autism'
+  		});
+  		marker5.addListener('click', function() {
+    		infowindow5.open(map, marker5);
+ 		 });
+  		var contentString6 = "Phyllis L. Susser School for Exceptional Children"
+      	var infowindow6 = new google.maps.InfoWindow({
+    		content: contentString6
+  		});
+  		var marker6 = new google.maps.Marker({
+    		position:  {lat:40.728509,lng:-73.801759},
+    		map: map,
+    		icon:image,
+    	
+    		title: 'Phyllis L. Susser School for Exceptional Children'
+  		});
+  		marker6.addListener('click', function() {
+    		infowindow6.open(map, marker6);
+ 		 });
+  		var contentString7 = "Learning Spring Elementary School"
+      	var infowindow7 = new google.maps.InfoWindow({
+    		content: contentString7
+  		});
+  		var marker7 = new google.maps.Marker({
+    		position:  {lat:40.781145,lng:-73.980203},
+    		map: map,
+    		icon:image,
+    	
+    		title: 'Learning Spring Elementary School'
+  		});
+  		marker7.addListener('click', function() {
+    		infowindow7.open(map, marker7);
+ 		 });
+      var contentString8 = "Shema Kolainu Hear our Voices"
+        var infowindow8 = new google.maps.InfoWindow({
+        content: contentString8
+      });
+      var marker8 = new google.maps.Marker({
+        position:  {lat:40.641772,lng:-73.994598},
+        map: map,
+        icon:image,
+      
+        title: 'Shema Kolainu Hear our Voices'
+      });
+      marker8.addListener('click', function() {
+        infowindow8.open(map, marker8);
+     });
+      var contentString9 = "Atlas School"
+        var infowindow9 = new google.maps.InfoWindow({
+        content: contentString9
+      });
+      var marker9 = new google.maps.Marker({
+        position:  {lat:40.748666,lng:-73.995311},
+        map: map,
+        icon:image,
+      
+        title: 'Atlas School'
+      });
+      marker9.addListener('click', function() {
+        infowindow9.open(map, marker9);
+     });
+      var contentString10 = "Child School(The)Elementary School Program"
+        var infowindow10 = new google.maps.InfoWindow({
+        content: contentString10
+      });
+      var marker10 = new google.maps.Marker({
+        position:  {lat:40.760737,lng:-73.951863},
+        map: map,
+        icon:image,
+      
+        title: 'Child School(The)Elementary School Program'
+      });
+      marker10.addListener('click', function() {
+        infowindow10.open(map, marker10);
+     });
+      var contentString11 = "Eden II School for Autistic Children"
+        var infowindow11 = new google.maps.InfoWindow({
+        content: contentString11
+      });
+      var marker11 = new google.maps.Marker({
+        position:  {lat:40.615726,lng:-74.078884},
+        map: map,
+        icon:image,
+      
+        title: 'Eden II School for Autistic Children'
+      });
+      marker11.addListener('click', function() {
+        infowindow11.open(map, marker11);
+     });
+      var contentString12 = "Eden II School for Autistic Children"
+        var infowindow12 = new google.maps.InfoWindow({
+        content: contentString12
+      });
+      var marker12 = new google.maps.Marker({
+        position:  {lat: 40.626866,lng:-74.124834},
+        map: map,
+        icon:image,
+      
+        title: 'Eden II School for Autistic Children'
+      });
+      marker12.addListener('click', function() {
+        infowindow12.open(map, marker12);
+     });
+      var contentString13 = "Eden II School for Autistic Children"
+        var infowindow13 = new google.maps.InfoWindow({
+        content: contentString13
+      });
+      var marker13 = new google.maps.Marker({
+        position:  {lat: 40.611069,lng:-74.121129},
+        map: map,
+        icon:image,
+      
+        title: 'Eden II School for Autistic Children'
+      });
+      marker13.addListener('click', function() {
+        infowindow13.open(map, marker13);
+     });
+      var contentString14 = "Hawthorne Country Day School"
+        var infowindow14 = new google.maps.InfoWindow({
+        content: contentString14
+      });
+      var marker14 = new google.maps.Marker({
+        position:  {lat: 40.709811,lng:-74.005368},
+        map: map,
+        icon:image,
+      
+        title: 'Hawthorne Country Day School'
+      });
+      marker14.addListener('click', function() {
+        infowindow14.open(map, marker14);
+     });
+      var contentString15 = "New York Center for Child Development"
+        var infowindow15 = new google.maps.InfoWindow({
+        content: contentString15
+      });
+      var marker15 = new google.maps.Marker({
+        position:  {lat: 40.761800,lng:-73.961884},
+        map: map,
+        icon:image,
+      
+        title: 'New York Center for Child Development'
+      });
+      marker15.addListener('click', function() {
+        infowindow15.open(map, marker15);
+     });
+       var contentString16 = "St Francis deSales School for the Deaf"
+        var infowindow16 = new google.maps.InfoWindow({
+        content: contentString16
+      });
+      var marker16 = new google.maps.Marker({
+        position:  {lat: 40.670765,lng:-73.960839},
+        map: map,
+        icon:image,
+      
+        title: 'St Francis deSales School for the Deaf'
+      });
+      marker16.addListener('click', function() {
+        infowindow16.open(map, marker16);
+     });
+       var contentString17 = "Heartshare Education Center"
+        var infowindow17 = new google.maps.InfoWindow({
+        content: contentString17
+      });
+      var marker17 = new google.maps.Marker({
+        position:  {lat: 40.603829,lng:-74.004960},
+        map: map,
+        icon:image,
+      
+        title: 'Heartshare Education Center'
+      });
+      marker17.addListener('click', function() {
+        infowindow17.open(map, marker17);
+     });
+      var contentString18 = "New Life School Lutheran Social Services"
+        var infowindow18 = new google.maps.InfoWindow({
+        content: contentString18
+      });
+      var marker18 = new google.maps.Marker({
+        position:  {lat: 40.821488, lng:-73.908994},
+        map: map,
+        icon:image,
+     
+        title: 'New Life School Lutheran Social Services'
+      });
+      marker18.addListener('click', function() {
+        infowindow18.open(map, marker18);
+     });
+var contentString19 = "Fireflies New York"
+        var infowindow19 = new google.maps.InfoWindow({
+        content: contentString19
+      });
+      var marker19 = new google.maps.Marker({
+        position:  {lat: 40.653516, lng: -73.980485},
+        map: map,
+        icon:image,
+     
+        title: 'Fireflies New York'
+      });
+      marker19.addListener('click', function() {
+        infowindow19.open(map, marker19);
+     });
+var contentString20 = "AHRC – NYC Chapter Day Blue Feather Elementary"
+        var infowindow20 = new google.maps.InfoWindow({
+        content: contentString20
+      });
+      var marker20 = new google.maps.Marker({
+        position:  {lat: 40.599451, lng: -73.931793},
+        map: map,
+        icon:image,
+     
+        title: 'AHRC – NYC Chapter Day Blue Feather Elementary'
+      });
+      marker20.addListener('click', function() {
+        infowindow20.open(map, marker20);
+     });
+var contentString21 = "Karma Kids Yoga"
+        var infowindow21 = new google.maps.InfoWindow({
+        content: contentString18
+      });
+      var marker21 = new google.maps.Marker({
+        position:  {lat: 40.742176, lng: -73.990471},
+        map: map,
+        icon:image,
+     
+        title: 'Karma Kids Yoga'
+      });
+      marker21.addListener('click', function() {
+        infowindow21.open(map, marker21);
+     });    
+var contentString22 = "New York Center for Autism Charter School"
+        var infowindow22 = new google.maps.InfoWindow({
+        content: contentString22
+      });
+      var marker22 = new google.maps.Marker({
+        position:  {lat: 40.785868, lng: -73.940587},
+        map: map,
+        icon:image,
+     
+        title: 'New York Center for Autism Charter School'
+      });
+      marker22.addListener('click', function() {
+        infowindow22.open(map, marker22);
+     });
+var contentString23 = "Heartshare First Step Early Childhood Center"
+        var infowindow23 = new google.maps.InfoWindow({
+        content: contentString23
+      });
+      var marker23 = new google.maps.Marker({
+        position:  {lat:40.603829, lng:-74.004960},
+        map: map,
+        icon:image,
+     
+        title: 'Heartshare First Step Early Childhood Center'
+      });
+      marker23.addListener('click', function() {
+        infowindow23.open(map, marker23);
+     });
+var contentString24 = "Swim Works"
+        var infowindow24 = new google.maps.InfoWindow({
+        content: contentString24
+      });
+      var marker24 = new google.maps.Marker({
+        position:  {lat: 40.756998, lng: -73.973497},
+        map: map,
+        icon:image,
+     
+        title: 'Swim Works'
+      });
+      marker24.addListener('click', function() {
+        infowindow24.open(map, marker24);
+     });
+var contentString25 = "Eden II Institute"
+        var infowindow25 = new google.maps.InfoWindow({
+        content: contentString25
+      });
+      var marker25 = new google.maps.Marker({
+        position:  {lat: 40.633638, lng: -74.148685},
+        map: map,
+        icon:image,
+     
+        title: 'Eden II Institute'
+      });
+      marker25.addListener('click', function() {
+        infowindow25.open(map, marker25);
+     });
+      var contentString26 = "Special Kids Dance"
+        var infowindow26 = new google.maps.InfoWindow({
+        content: contentString26
+      });
+      var marker26 = new google.maps.Marker({
+        position:  {lat:40.686975,lng:-73.978898},       
+        map: map,
+        icon:image,
+     
+        title: 'Special Kids Dance'
+      });
+      marker26.addListener('click', function() {
+        infowindow26.open(map, marker26);
+     });
+
+var contentString27 = "JCC Manhattan"
+        var infowindow27 = new google.maps.InfoWindow({
+        content: contentString27
+      });
+      var marker27 = new google.maps.Marker({
+        position:  {lat:40.781145,lng:-73.980203},
+        map: map,
+        icon:image,
+     
+        title: 'JCC Manhattan'
+      });
+      marker27.addListener('click', function() {
+        infowindow27.open(map, marker27);
+     });
+
+var contentString28 = "Baychester youth council"
+        var infowindow28 = new google.maps.InfoWindow({
+        content: contentString28
+      });
+      var marker28 = new google.maps.Marker({
+        position:  {lat:40.884563,lng:-73.843076},
+        map: map,
+        icon:image,
+     
+        title: 'Baychester youth council'
+      });
+      marker28.addListener('click', function() {
+        infowindow28.open(map, marker28);
+     });
+
+var contentString29 = "Kingsbridge heights community center"
+        var infowindow29 = new google.maps.InfoWindow({
+        content: contentString29
+      });
+      var marker29 = new google.maps.Marker({
+        position:  {lat:40.877579,lng:-73.900715},
+        map: map,
+        icon:image,
+
+        title: 'Kingsbridge heights community center'
+      });
+      marker29.addListener('click', function() {
+        infowindow29.open(map, marker29);
+     });
+
+var contentString30 = "Mosholu Montefiore Community Center"
+        var infowindow30 = new google.maps.InfoWindow({
+        content: contentString30
+      });
+      var marker30 = new google.maps.Marker({
+        position:  {lat:40.881933,lng:-73.880494},
+        map: map,
+        icon:image,
+     
+        title: 'Mosholu Montefiore Community Center'
+      });
+      marker30.addListener('click', function() {
+        infowindow30.open(map, marker30);
+     });
+
+var contentString31 = "JCC Manhattan Boosti after school program"
+        var infowindow31 = new google.maps.InfoWindow({
+        content: contentString31
+      });
+      var marker31 = new google.maps.Marker({
+        position:  {lat:40.781145,lng:-73.980203},
+        map: map,
+        icon:image,
+     
+        title: 'JCC Manhattan Boosti after school program'
+      });
+      marker31.addListener('click', function() {
+        infowindow31.open(map, marker31);
+     });
+     //   
+var contentString32 = "Gym and creative exploration "
+        var infowindow32 = new google.maps.InfoWindow({
+        content: contentString32
+      });
+      var marker32 = new google.maps.Marker({
+        position:  {lat:40.760885,lng:-73.723290},
+        map: map,
+        icon:image,
+     
+        title: 'Gym and creative exploration '
+      });
+      marker32.addListener('click', function() {
+        infowindow32.open(map, marker32);
+     });
+       
+
+
+
+
+
+
+
+
+
+      	}
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        //key=AIzaSyCyKpDT3oR2iCk8G0REGBVCdr3BEzN1sX4&
+    </script>
+
+</body>
+
+</html>
+
