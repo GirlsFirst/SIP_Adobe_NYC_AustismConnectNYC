@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <link rel="stylesheet" type="text/css" href="AutismConnectNYC.css"> -->
+   <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+      body {
+      background-color: lightblue;
+    color: darkblue;
+      font-family: "Arial", "Arial", Arial, sans-serif;
+      text-align: center;
+      padding:0;
+    }
+
+.wrapper {
+  margin: px auto;
+  max-width: 600px;
+  padding: 40px;
+  border: 10px double red;
+}
+    </style>
+  <title>
+AutismConnect NYC</title>
+</head>
+<h1>AutismConnect NYC Map</h1>
+<li><a href="AutismConnectNYC.html"><link rel="stylesheet" type="text/css" href="AutismConnectNYC.css">Home</link></a></li>
+
+<body>
+<style>
+    
+    h1 {
+      color:white;
+      font-size: 100px;
+      border: 7px dotted white;
+    }
+    body {
+    background-color: lightblue;
+    color: black;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+/*        font-weight: bold;*/
+    padding:0;
+    }
+
+    .wrapper {
+    margin: px auto;
+    max-width: 600px;
+    padding: 40px;
+    border: 10px double red;
+    }
+    #content {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: left;
+    padding:0;
+    }
+    #firstHeading {
+      text-align: center;
+    }
+  </style>
+
+  <div id="map"></div>
+<script>
+      function initMap() {
+        
+        
+      
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+            center: {lat: 40.783001, lng: -73.958882},
+            zoom: 11,
+            mapTypeId: 'satellite'
+             
+        });
+
+        //var myLatlng = {lat:40.643797,lng:-73.963661};
+
+
+var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Brooklyn Autism Center</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Not-for-profit school in Brooklyn. ' +
+      'Accepts children ages 5-21. </p>'+
+      '<p><a href="https://www.brooklynautismcenter.org/education-curriculum">'+
+      'https://www.brooklynautismcenter.org/education-curriculum </a> '+
+      '</div>'+
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+        var image = {
+          url: "http://maps.gpsvisualizer.com/google_maps/icons/google/blue.png",
+           // size: new google.maps.Size(40, 64),
+          // origin: new google.maps.Point(0, 0),
+          // anchor: new google.maps.Point(0, 32)
+        };
+        var marker = new google.maps.Marker({
+        position:  {lat:40.692507,lng:-73.986475},
+        map: map,
+        icon:image,
+
+        title: 'Brooklyn Autism Center'
+
+      });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+     });
+    var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">American Autism Association</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Provides activities such as ballet classes, horseback riding, and more ' +
+      '<p>for children with autism. Open for all ages and located in Manhattan.</p>'+
+      '<p><a href="https://www.myautism.org/">'+
+      'https://www.myautism.org/ </a> '+
+      '</div>'+
+      '</div>';
+        var infowindow2 = new google.maps.InfoWindow({
+        content: contentString2
+      });
+      var marker2 = new google.maps.Marker({
+        position:  {lat:40.746870,lng:-73.980173},
+        map: map,
+        icon:image,
+      
+        title: 'American Autism Association'
+      });
+      marker2.addListener('click', function() {
+        infowindow2.open(map, marker2);
+     });
+var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">The Neighborhood Charter School of Harlem</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Charter School in Harlem in Manhattan and paid for by the state. Accepts children ages 5-12.</p>'+
+      '<p><a href="http://www.ncsharlem.org/  ">'+
+      'http://www.ncsharlem.org/ </a> '+
+      '</div>'+
+      '</div>';
+
+        var infowindow3 = new google.maps.InfoWindow({
+        content: contentString3
+      });
+      var marker3 = new google.maps.Marker({
+        position:  {lat:40.807580,lng:-73.947377},
+        map: map,
+        icon:image,
+      
+        title: 'The Neighborhood Charter School of Harlem'
+      });
+      marker3.addListener('click', function() {
+        infowindow3.open(map, marker3);
+     });
+
+var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">The Neighborhood Charter School of Harlem</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Charter School in Harlem in Manhattan and paid for by the state. Accepts children ages 5-12.</p>'+
+      '<p><a href="http://www.nycautismcharterschool.org/ ">'+
+      'http://www.nycautismcharterschool.org/ </a> '+
+      '</div>'+
+      '</div>';
+        var infowindow4 = new google.maps.InfoWindow({
+        content: contentString4
+      });
+      var marker4 = new google.maps.Marker({
+        position:  {lat:40.785868,lng:-73.940587},
+        map: map,
+        icon:image,
+      
+        title: ' New York Center for Autism Charter School'
+      });
+      marker4.addListener('click', function() {
+        infowindow4.open(map, marker4);
+     });
+var contentString5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Imagine Academy for Autism</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Imagine Academy is a non-publicly funded school located in Brooklyn and accepts children ages 5-21.</p>'+
+      '<p><a href="http://imagineacademyforautism.org/Home.aspx  ">'+
+      'http://imagineacademyforautism.org/Home.aspx  </a> '+
+      '</div>'+
+      '</div>';
+
+        var infowindow5 = new google.maps.InfoWindow({
+        content: contentString5
+      });
+      var marker5 = new google.maps.Marker({
+        position:  {lat:40.613957,lng:-73.960497},
+        map: map,
+        icon:image,
+      
+        title: 'Imagine Academy for Autism'
+      });
+      marker5.addListener('click', function() {
+        infowindow5.open(map, marker5);
+     });
+// EVERYTHING BELLOW NOT TESTED
+// EVERYTHING BELLOW NOT TESTED
+// EVERYTHING BELLOW NOT TESTED
+var contentString6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Birch Family Services, Inc. Phillis</h3>'+
+      '<h3 id="firstHeading" class="firstHeading">L. Susser School for Exceptional Children</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Birch Family Serices is a state funded private school in Queens. It accepts children 13-21 and has residential programs along with non residential ones.</p>'+
+      '<p><a href="http://www.birchfamilyservices.org/index.html">'+
+      'http://www.birchfamilyservices.org/index.html </a> '+
+      '</div>'+
+      '</div>';
+        var infowindow6 = new google.maps.InfoWindow({
+        content: contentString6
+      });
+      var marker6 = new google.maps.Marker({
+        position:  {lat:40.728509,lng:-73.801759},
+        map: map,
+        icon:image,
+      
+        title: 'Phyllis L. Susser School for Exceptional Children'
+      });
+      marker6.addListener('click', function() {
+        infowindow6.open(map, marker6);
+     });
+var contentString7 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Learning Spring Elementry School</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Learning Spring is a school located in Manhattan. It accepts children ages 5-13 and requires a $50 application fee.</p>'+
+      '<p><a href="http://learningspring.org/ ">'+
+      'http://learningspring.org/</a> '+
+      '</div>'+
+      '</div>';
+
+        var infowindow7 = new google.maps.InfoWindow({
+        content: contentString7
+      });
+      var marker7 = new google.maps.Marker({
+        position:  {lat:40.781145,lng:-73.980203},
+        map: map,
+        icon:image,
+      
+        title: 'Learning Spring Elementary School'
+      });
+      marker7.addListener('click', function() {
+        infowindow7.open(map, marker7);
+     });
+var contentString8 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Shema Kolainu Hear our Voices</h3>'+
+      '<div id="bodyContent">'+
+      '<p>This school is for children ages anywhere from birth to 12. It is located in Brooklyn.</p>'+
+      '<p><a href="http://www.shemakolainu.org/#!center-based-programs/lq1tg">'+
+      'http://www.shemakolainu.org/#!center-based-programs/lq1tg</a> '+
+      '</div>'+
+      '</div>';
+
+        var infowindow8 = new google.maps.InfoWindow({
+        content: contentString8
+      });
+      var marker8 = new google.maps.Marker({
+        position:  {lat:40.641772,lng:-73.994598},
+        map: map,
+        icon:image,
+      
+        title: 'Shema Kolainu Hear our Voices'
+      });
+      marker8.addListener('click', function() {
+        infowindow8.open(map, marker8);
+     });
+var contentString9 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">The Atlas School</h3>'+
+      '<div id="bodyContent">'+
+      '<p>The Atlas School is a non-profit school in Manhattan. Students are ages 7-21 and it also has afterschool programs.</p>'+
+      '<p><a href="http://www.atlasforautism.org/school/">'+
+      'http://www.atlasforautism.org/school/</a> '+
+      '</div>'+
+      '</div>';
+        var infowindow9 = new google.maps.InfoWindow({
+        content: contentString9
+      });
+      var marker9 = new google.maps.Marker({
+        position:  {lat:40.748666,lng:-73.995311},
+        map: map,
+        icon:image,
+      
+        title: 'Atlas School'
+      });
+      marker9.addListener('click', function() {
+        infowindow9.open(map, marker9);
+     });
+var contentString10 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">The Child School</h3>'+
+      '<div id="bodyContent">'+
+      '<p>The Child School is on Roosevelt Island in Manhattan for children ages 5-21. It is a non puublic day school paid for by the state.</p>'+
+      '<p><a href="http://www.thechildschool.org/index.cfm">'+
+      'http://www.thechildschool.org/index.cfm</a> '+
+      '</div>'+
+      '</div>';
+        var infowindow10 = new google.maps.InfoWindow({
+        content: contentString10
+      });
+      var marker10 = new google.maps.Marker({
+        position:  {lat:40.760737,lng:-73.951863},
+        map: map,
+        icon:image,
+      
+        title: 'Child School(The)Elementary School Program'
+      });
+      marker10.addListener('click', function() {
+        infowindow10.open(map, marker10);
+     });
+var contentString11 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Eden II School for Autistic Children</h3>'+
+      '<div id="bodyContent">'+
+      '<p>The Eden II Schools are located in Staten Island and have multiable locations. They accept students ages 5-21.</p>'+
+      '<p><a href="http://www.thechildschool.org/index.cfm">'+
+      'http://www.thechildschool.org/index.cfm</a> '+
+      '</div>'+
+      '</div>';
+        var infowindow11 = new google.maps.InfoWindow({
+        content: contentString11
+      });
+      var marker11 = new google.maps.Marker({
+        position:  {lat:40.615726,lng:-74.078884},
+        map: map,
+        icon:image,
+      
+        title: 'Eden II School for Autistic Children'
+      });
+      marker11.addListener('click', function() {
+        infowindow11.open(map, marker11);
+     });
+  // var contentString12 = '<a href="http://eden2.org/eden-ii-school/">Eden II School for Autistic Children</a>'
+        var infowindow12 = new google.maps.InfoWindow({
+        content: contentString11
+      });
+      var marker12 = new google.maps.Marker({
+        position:  {lat: 40.626866,lng:-74.124834},
+        map: map,
+        icon:image,
+      
+        title: 'Eden II School for Autistic Children'
+      });
+      marker12.addListener('click', function() {
+        infowindow12.open(map, marker12);
+     });
+      // var contentString13 = '<a href="http://eden2.org/eden-ii-school/">Eden II School for Autistic Children</a>'
+        var infowindow13 = new google.maps.InfoWindow({
+        content: contentString11
+      });
+      var marker13 = new google.maps.Marker({
+        position:  {lat: 40.611069,lng:-74.121129},
+        map: map,
+        icon:image,
+      
+        title: 'Eden II School for Autistic Children'
+      });
+      marker13.addListener('click', function() {
+        infowindow13.open(map, marker13);
+     });
+var contentString14 ='<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Hawthorne Country Day School</h3>'+
+      '<div id="bodyContent">'+
+      '<p>The Hawthorne Country Day School is in Manhattan for children ages 5-21.</p>'+
+      '<p><a href="http://hawthornecountryday.org/">'+
+      'http://hawthornecountryday.org/</a> '+
+      '</div>'+
+      '</div>';
+        var infowi
+    var infowindow14 = new google.maps.InfoWindow({
+        content: contentString14
+      });
+      var marker14 = new google.maps.Marker({
+        position:  {lat: 40.709811,lng:-74.005368},
+        map: map,
+        icon:image,
+      
+        title: 'Hawthorne Country Day School'
+      });
+      marker14.addListener('click', function() {
+        infowindow14.open(map, marker14);
+     });
+var contentString15 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">New York Center for Child Development</h3>'+
+      '<div id="bodyContent">'+
+      '<p>The New York Center for Child Development is a pre-school in Manhattan that is for children under 4.</p>'+
+      '<p><a href="http://www.nyccd.org/">'+
+      'http://www.nyccd.org/</a> '+
+      '</div>'+
+      '</div>';
+
+        var infowindow15 = new google.maps.InfoWindow({
+        content: contentString15
+      });
+      var marker15 = new google.maps.Marker({
+        position:  {lat: 40.761800,lng:-73.961884},
+        map: map,
+        icon:image,
+      
+        title: 'New York Center for Child Development'
+      });
+      marker15.addListener('click', function() {
+        infowindow15.open(map, marker15);
+     });
+var contentString16 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">St.Francis deSales School for the deaf</h3>'+
+      '<div id="bodyContent">'+
+      '<p>St.Francis is a school children hearing impaired with a program for children with special needs. it is for children ages 5-21 and is located in Brooklyn.</p>'+
+      '<p><a href="http://www.sfdesales.org/">'+
+      'http://www.sfdesales.org/</a> '+
+      '</div>'+
+      '</div>';
+        var infowindow16 = new google.maps.InfoWindow({
+        content: contentString16
+      });
+      var marker16 = new google.maps.Marker({
+        position:  {lat: 40.670765,lng:-73.960839},
+        map: map,
+        icon:image,
+      
+        title: 'St Francis deSales School for the Deaf'
+      });
+      marker16.addListener('click', function() {
+        infowindow16.open(map, marker16);
+     });
+var contentString17 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">HeartShare Education Center</h3>'+
+      '<div id="bodyContent">'+
+      '<p>HeartShare is a school for children 5-21 in Brooklyn.</p>'+
+      '<p><a href="http://theheartshareschool.org/">'+
+      'http://theheartshareschool.org/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow17 = new google.maps.InfoWindow({
+        content: contentString17
+      });
+      var marker17 = new google.maps.Marker({
+        position:  {lat: 40.603829,lng:-74.004960},
+        map: map,
+        icon:image,
+      
+        title: 'Heartshare Education Center'
+      });
+      marker17.addListener('click', function() {
+        infowindow17.open(map, marker17);
+     });
+var contentString18 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">The New Life School</h3>'+
+      '<div id="bodyContent">'+
+      '<p>The New Life School is a private school that is free if you are eligible. It is for children ages 8-21 and is in the Bronx.</p>'+
+      '<p><a href="http://www.thenewlifeschool.com/">'+
+      'http://www.thenewlifeschool.com/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow18 = new google.maps.InfoWindow({
+        content: contentString18
+      });
+      var marker18 = new google.maps.Marker({
+        position:  {lat: 40.821488, lng:-73.908994},
+        map: map,
+        icon:image,
+     
+        title: 'New Life School Lutheran Social Services'
+      });
+      marker18.addListener('click', function() {
+        infowindow18.open(map, marker18);
+     });
+var contentString19 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Fireflies New York</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Fireflies New York is a Marshal Arts program for children ages 3.5-15 in Brooklyn.</p>'+
+      '<p><a href="http://www.firefliesny.com/">'+
+      'http://www.firefliesny.com/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow19 = new google.maps.InfoWindow({
+        content: contentString19
+      });
+      var marker19 = new google.maps.Marker({
+        position:  {lat: 40.653516, lng: -73.980485},
+        map: map,
+        icon:image,
+     
+        title: 'FirefliesNY'
+      });
+      marker19.addListener('click', function() {
+        infowindow19.open(map, marker19);
+     });
+var contentStrin20 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">AHRC- NYC Chapter Day Blue Feather Elementary</h3>'+
+      '<div id="bodyContent">'+
+      '<p>AHRC is a non-profit organization with various programs. It is for children ages 5-12, in Brooklyn, and is the programs are free. </p>'+
+      '<p><a href="https://www.ahrcnyc.org/">'+
+      'https://www.ahrcnyc.org/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow20 = new google.maps.InfoWindow({
+        content: contentString20
+      });
+      var marker20 = new google.maps.Marker({
+        position:  {lat: 40.599451, lng: -73.931793},
+        map: map,
+        icon:image,
+     
+        title: 'AHRC NYC Chapter Day Blue Feather Elementary'
+      });
+      marker20.addListener('click', function() {
+        infowindow20.open(map, marker20);
+     });
+var contentStrin21 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Karma Kids Yoga</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Karma Kids Yoga is Yoga programs for children ages up to 21 in manhattan.</p>'+
+      '<p><a href="http://www.karmakidsyoga.com/">'+
+      'http://www.karmakidsyoga.com/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow21 = new google.maps.InfoWindow({
+        content: contentString18
+      });
+      var marker21 = new google.maps.Marker({
+        position:  {lat: 40.742176, lng: -73.990471},
+        map: map,
+        icon:image,
+     
+        title: 'Karma Kids Yoga'
+      });
+      marker21.addListener('click', function() {
+        infowindow21.open(map, marker21);
+     });    
+var contentString23 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Taranto First Step Early Childhood Center</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Taranto First Step is a free pre-school in Brooklyn for children 3-4.</p>'+
+      '<p><a href="https://www.heartshare.org/our-programs/developmental-disabilities-services/early-childhood-services//">'+
+      'https://www.heartshare.org/our-programs/developmental-disabilities-services/early-childhood-services//</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow23 = new google.maps.InfoWindow({
+        content: contentString23
+      });
+      var marker23 = new google.maps.Marker({
+        position:  {lat:40.603829, lng:-74.004960},
+        map: map,
+        icon:image,
+     
+        title: 'Taranto First Step Early Childhood Center'
+      });
+      marker23.addListener('click', function() {
+        infowindow23.open(map, marker23);
+     });
+var contentString24 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Swim Works</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Swim Works si a swimming school for children age 21 and under. It costs money and is located in Manhattan.</p>'+
+      '<p><a href="http://www.swimworksnyc.com/index.html ">'+
+      'http://www.swimworksnyc.com/index.html </a>'+
+      '</div>'+
+      '</div>';
+        var infowindow24 = new google.maps.InfoWindow({
+        content: contentString24
+      });
+      var marker24 = new google.maps.Marker({
+        position:  {lat: 40.756998, lng: -73.973497},
+        map: map,
+        icon:image,
+     
+        title: 'Swim Works'
+      });
+      marker24.addListener('click', function() {
+        infowindow24.open(map, marker24);
+     });
+var contentString25 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Eden II Institute</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Eden II Institute is a non-Profit organization for children ages 5-21 on staten Island.</p>'+
+      '<p><a href="http://eden2.org/">'+
+      'http://eden2.org/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow25 = new google.maps.InfoWindow({
+        content: contentString25
+      });
+      var marker25 = new google.maps.Marker({
+        position:  {lat: 40.633638, lng: -74.148685},
+        map: map,
+        icon:image,
+     
+        title: 'Eden II Institute'
+      });
+      marker25.addListener('click', function() {
+        infowindow25.open(map, marker25);
+     });
+var contentString26 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Special Kids Dance</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Special Kids Dance are dance classes for children 3-21 in brooklyn. </p>'+
+      '<p><a href="http://markmorrisdancegroup.org/dance-center/the-school/special-kids">'+
+      'http://markmorrisdancegroup.org/dance-center/the-school/special-kids</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow26 = new google.maps.InfoWindow({
+        content: contentString26
+      });
+      var marker26 = new google.maps.Marker({
+        position:  {lat:40.686975,lng:-73.978898},       
+        map: map,
+        icon:image,
+     
+        title: 'Special Kids Dance'
+      });
+      marker26.addListener('click', function() {
+        infowindow26.open(map, marker26);
+     });
+
+var contentString27 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Jcc Manhattan</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Jcc Manhattan is an organization with programs in manhattan for children ages 3-21. </p>'+
+      '<p><a href="http://www.jccmanhattan.org/special-needs/">'+
+      'http://www.jccmanhattan.org/special-needs/ </a>'+
+      '</div>'+
+      '</div>';
+        var infowindow27 = new google.maps.InfoWindow({
+        content: contentString27
+      });
+      var marker27 = new google.maps.Marker({
+        position:  {lat:40.781145,lng:-73.980203},
+        map: map,
+        icon:image,
+     
+        title: 'JCC Manhattan'
+      });
+      marker27.addListener('click', function() {
+        infowindow27.open(map, marker27);
+     });
+
+var contentString28 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Baychester Youth Council</h3>'+
+      '<div id="bodyContent">'+
+      '<p>BayChester Youth Council has free afterschool programs in the Bronx for children ages 13-21.</p>'+
+      '<p><a href="http://www.baychesteryouth.org/9801/9822.html">'+
+      'http://www.baychesteryouth.org/9801/9822.html</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow28 = new google.maps.InfoWindow({
+        content: contentString28
+      });
+      var marker28 = new google.maps.Marker({
+        position:  {lat:40.884563,lng:-73.843076},
+        map: map,
+        icon:image,
+     
+        title: 'Baychester youth council'
+      });
+      marker28.addListener('click', function() {
+        infowindow28.open(map, marker28);
+     });
+var contentString29 = ' <div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Kingsbridge Heights Community Center</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Kingsbridge is a community center in the Bronx for children ages 5-21. </p>'+
+      '<p><a href="http://www.khcc-nyc.org/special-needs-program/">'+
+      'http://www.khcc-nyc.org/special-needs-program/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow29 = new google.maps.InfoWindow({
+        content: contentString29
+      });
+      var marker29 = new google.maps.Marker({
+        position:  {lat:40.877579,lng:-73.900715},
+        map: map,
+        icon:image,
+
+        title: 'Kingsbridge heights community center'
+      });
+      marker29.addListener('click', function() {
+        infowindow29.open(map, marker29);
+     });
+
+var contentString30 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Mosholu Montefiore Community Center</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Mosholu is a community center in the Bronx for children ages 5-12 with programs for children with autism.</p>'+
+      '<p><a href="http://www.mmcc.org/special-needs/sunshine-superstars-after-school/">'+
+      'http://www.mmcc.org/special-needs/sunshine-superstars-after-school/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow30 = new google.maps.InfoWindow({
+        content: contentString30
+      });
+      var marker30 = new google.maps.Marker({
+        position:  {lat:40.881933,lng:-73.880494},
+        map: map,
+        icon:image,
+     
+        title: 'Mosholu Montefiore Community Center'
+      });
+      marker30.addListener('click', function() {
+        infowindow30.open(map, marker30);
+     });
+
+var contentString31 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Jcc Manhattan Boosti</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Jcc Manhattan has afterschool prgrams for children ages 5-21. The programs are free and based in Manhattan. </p>'+
+      '<p><a href="http://www.jccmanhattan.org/special-needs/school-age/boost/">'+
+      'http://www.jccmanhattan.org/special-needs/school-age/boost/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow31 = new google.maps.InfoWindow({
+        content: contentString31
+      });
+      var marker31 = new google.maps.Marker({
+        position:  {lat:40.781145,lng:-73.980203},
+        map: map,
+        icon:image,
+     
+        title: 'JCC Manhattan Boosti after school program'
+      });
+      marker31.addListener('click', function() {
+        infowindow31.open(map, marker31);
+     });
+  
+var contentString32 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h3 id="firstHeading" class="firstHeading">Samuel Field Y</h3>'+
+      '<div id="bodyContent">'+
+      '<pSamuel Field Y has special needs programs for children ages 5-21 in Queens.</p>'+
+      '<p><a href="http://www.sfy.org/special-needs/">'+
+      'http://www.sfy.org/special-needs/</a>'+
+      '</div>'+
+      '</div>';
+        var infowindow32 = new google.maps.InfoWindow({
+        content: contentString32
+      });
+      var marker32 = new google.maps.Marker({
+        position:  {lat:40.760885,lng:-73.723290},
+        map: map,
+        icon:image,
+     
+        title: 'Samuel Field Y '
+      });
+      marker32.addListener('click', function() {
+        infowindow32.open(map, marker32);
+     });
+  }
+
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        //key=AIzaSyCyKpDT3oR2iCk8G0REGBVCdr3BEzN1sX4&
+    </script>
+    <img src="https://pixabay.com/static/uploads/photo/2016/05/26/18/28/autism-1417942_640.png" alt=""/>
+</body>
+    <style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-2/cur116.cur), progress !important;}</style><a href="http://www.cursors-4u.com/cursor/2008/12/17/cool-blue-outer-glow-pointer.html" target="_blank" title="Cool Blue Outer Glow Pointer"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Cool Blue Outer Glow Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
+</html>
